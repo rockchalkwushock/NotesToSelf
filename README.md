@@ -1,6 +1,6 @@
 # NotesToSelf
 
-# Purpose
+## Purpose
 
 A place to put those little nuggets of knowledge I have learned after being a complete dumbass and spending hours researching errors. This will grow...I just hope not exponentially!
 
@@ -38,6 +38,8 @@ app.get('/api', [routes]);
 
 app.use('/api', [routes]); // Real smooth Clark, real smooth!
 ```
+
+4) Setting up dotenv for env vars.
 
 #### PROTECTING YOUR ENVIRONMENT
 ```bash
@@ -83,3 +85,20 @@ const somefunction = () => {
   const url = `http://someapi.com/${key, secret}`; // this is a very poor example, but you get the idea.
 }
 ```
+
+5) Promises Promises Promises.
+
+## A Real Nugget of Knowledge brought to you by @EQuimper
+
+`axios` is a _promise based HTTP client_ this being said what does it return on any _CRUD_ operation class???
+
+A promise!
+
+```javascript
+axios.post('/library', { result }); // returns a promise.
+axios.get('/library'); // also returns a promise! Who'd have thought?
+```
+
+So when using something like `redux-pack` that is expecting a _promise_ YAHTZEE!!!
+
+Also since `redux-promise-middleware` will handle the creation of a _new promise_ this is a win/win when it comes to using promises with `redux`.
