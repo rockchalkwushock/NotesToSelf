@@ -45,38 +45,15 @@ app.use('/api', [routes]); // Real smooth Clark, real smooth!
 ```bash
 yarn add dotenv
 touch .env
-mkdir config
-cd config
-touch envConfig.js
 ```
 _.env_
 ```plaintext
 API_KEY='YOUR API_KEY HERE'
 API_SECRET='YOUR API_SECRET HERE'
 ```
-_envConfig.js_
+_entryPointToProject.js_
 ```javascript
-import dotenv from 'dotenv';
-
-// Configure Envvars.
-dotenv.config();
-
-// Bring in Envvars from .env.
-const envVariables = [
-  'API_KEY',
-  'API_SECRET'
-];
-
-// Check that Envvars are set.
-envVariables.forEach((env) => {
-  if (!process.env[env]) {
-    throw new Error(`Env variable ${env} not set.`);
-  }
-});
-```
-_file.js_
-```javascript
-import '/config/envConfig';
+import 'dotenv/config';
 
 const key = process.env.API_KEY;
 const secret = process.env.API_SECRET;
@@ -85,6 +62,16 @@ const somefunction = () => {
   const url = `http://someapi.com/${key, secret}`; // this is a very poor example, but you get the idea.
 }
 ```
+
+**NOTE**: When using `create-react-app` all developer created env vars must begin with the prefix `REACT_APP_`.
+
+_.env_example_
+```paintext
+NODE_ENV=development
+REACT_APP_SECRET_CODE=123
+```
+
+For more information: [Environment Variables in CRA](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables)
 
 5) Promises Promises Promises.
 
