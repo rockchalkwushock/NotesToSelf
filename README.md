@@ -65,13 +65,17 @@ const somefunction = () => {
 
 **NOTE**: When using `create-react-app` all developer created env vars must begin with the prefix `REACT_APP_`.
 
+For more information: [Environment Variables in CRA](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables)
+
+**NOTE**: `create-react-app` has `dotenv` built into the `build` & `start` scripts. No need to import into project.
+
+For more information: [Dotenv in React-Scripts](https://github.com/facebookincubator/create-react-app/blob/v0.8.5/packages/react-scripts/scripts/build.js#L19)
+
 _.env_example_
 ```paintext
 NODE_ENV=development
 REACT_APP_SECRET_CODE=123
 ```
-
-For more information: [Environment Variables in CRA](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables)
 
 5) Promises Promises Promises.
 
