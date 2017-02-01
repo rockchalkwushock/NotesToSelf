@@ -93,3 +93,11 @@ axios.get('/library'); // also returns a promise! Who'd have thought?
 So when using something like `redux-pack` that is expecting a _promise_ YAHTZEE!!!
 
 Also since `redux-promise-middleware` will handle the creation of a _new promise_ this is a win/win when it comes to using promises with `redux`.
+
+6) Scrolling on mobile devices
+
+Thanks to MR. Wesbos!
+
+```css
+ -webkit-overflow-scrolling: touch;
+```
