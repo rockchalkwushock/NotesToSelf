@@ -101,3 +101,9 @@ Thanks to MR. Wesbos!
 ```css
  -webkit-overflow-scrolling: touch;
 ```
+
+7) Deploying create-react-app projects to GH-Pages.
+
+Don't be a dumbass! This is still webpack and bundles via the same exact principles.
+
+For more info on my idiocy look at this [issue](https://github.com/facebookincubator/create-react-app/issues/1479).
