@@ -107,3 +107,25 @@ Thanks to MR. Wesbos!
 Don't be a dumbass! This is still webpack and bundles via the same exact principles.
 
 For more info on my idiocy look at this [issue](https://github.com/facebookincubator/create-react-app/issues/1479).
+
+8) Working with the native `fetch()`
+
+`fetch()` will always return as a promise (just like `axios`) and this promise contains a _blob_ of information. Their will be no discernable data because _fetch_ does not know what I want the data to be. By looking under the _prototype_ you can find several methods to apply to the _blob_. Should I want to view the data from the `fetch()` as a json I simply can do the following:
+
+```javascript
+fetch(endpoint)
+  .then(blob => blob.json())
+  .then(data => console.log(data))
+  
+// OR using async/await
+
+const fetchData = async () => {
+  try {
+    const res = await fetch(endpoint);
+    const data = res.json();
+    return data; // can perform deconstruction here.
+  } catch (e) {
+    console.log(e);
+  }
+}
+```
