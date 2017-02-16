@@ -4,11 +4,27 @@
 
 A place to put those little nuggets of knowledge I have learned after being a complete dumbass and spending hours researching errors. This will grow...I just hope not exponentially!
 
-## READ THE DOCS DUMMY!!!!
+## Table of Contents
+- [IMPORTANT](#important)
+- [NYC](#nyc)
+- [CI](#ci)
+- [Syntax](#syntax)
+- [Dotenv](#dotenv)
+- [Promises](#promises)
+- [Mobile](#mobile)
+- [Deploying](#deploying)
+- [Fetch](#fetch)
+- [CLI](#cli)
+- [GIT](#git)
 
-1) When using NYC for testing coverage the `babel-plugin-istanbul` package is only utilized with in a specific environment set in the `.babelrc`...don't be stupid and make sure that is the environment you are setting for testing or visa versa! Real smooth Clark!
+## IMPORTANT
 
-**FYI THIS MUST BE === _TEST_**
+**READ THE DOCS DUMMY!!!!** 
+
+This will save you hours of headaches and guess what it's in English so you have no excuse!
+
+### NYC
+When using NYC for testing coverage the `babel-plugin-istanbul` package is only utilized with in a specific environment set in the `.babelrc`...don't be stupid and make sure that the environment you are setting for testing is **test**! Real smooth Clark!
 
 **.bablerc example**
 ```json
@@ -29,9 +45,11 @@ A place to put those little nuggets of knowledge I have learned after being a co
 "test": "cross-env NODE_ENV=test nyc --reporter=text --reporter=lcov _mocha",
 ```
 
-2) When using env vars and running CI...set the damn env vars in the CI!
+### CI
+When using env vars and running CI...set the damn env vars in the CI whether it be through CLI or GUI!
 
-3) One of these things is not like the other...
+### Syntax
+One of these things is not like the other...
 
 ```javascript
 app.get('/api', [routes]);
@@ -39,9 +57,9 @@ app.get('/api', [routes]);
 app.use('/api', [routes]); // Real smooth Clark, real smooth!
 ```
 
-4) Setting up dotenv for env vars.
+### Dotenv
+Setting up dotenv for env vars.
 
-#### PROTECTING YOUR ENVIRONMENT
 ```bash
 yarn add dotenv
 touch .env
@@ -77,11 +95,11 @@ NODE_ENV=development
 REACT_APP_SECRET_CODE=123
 ```
 
-5) Promises Promises Promises.
+### Promises
 
-## A Real Nugget of Knowledge brought to you by @EQuimper
+## A Real Nugget of Knowledge brought to you by [@EQuimper](https://github.com/EQuimper)
 
-`axios` is a _promise based HTTP client_ this being said what does it return on any _CRUD_ operation class???
+`axios` is a _promise based HTTP client_ this being said what does it return on any _CRUD_ operation???
 
 A promise!
 
@@ -90,11 +108,12 @@ axios.post('/library', { result }); // returns a promise.
 axios.get('/library'); // also returns a promise! Who'd have thought?
 ```
 
-So when using something like `redux-pack` that is expecting a _promise_ YAHTZEE!!!
+So when using something like `redux-pack` that is expecting a _promise_ **YAHTZEE**!!!
 
 Also since `redux-promise-middleware` will handle the creation of a _new promise_ this is a win/win when it comes to using promises with `redux`.
 
-6) Scrolling on mobile devices
+### Mobile
+Scrolling on mobile devices
 
 Thanks to MR. Wesbos!
 
@@ -102,13 +121,15 @@ Thanks to MR. Wesbos!
  -webkit-overflow-scrolling: touch;
 ```
 
-7) Deploying create-react-app projects to GH-Pages.
+### Deploying
+Deploying `create-react-app` projects to GH-Pages.
 
 Don't be a dumbass! This is still webpack and bundles via the same exact principles.
 
 For more info on my idiocy look at this [issue](https://github.com/facebookincubator/create-react-app/issues/1479).
 
-8) Working with the native `fetch()`
+### Fetch
+Working with the native `fetch()`
 
 `fetch()` will always return as a promise (just like `axios`) and this promise contains a _blob_ of information. Their will be no discernable data because _fetch_ does not know what I want the data to be. By looking under the _prototype_ you can find several methods to apply to the _blob_. Should I want to view the data from the `fetch()` as a json I simply can do the following:
 
@@ -129,3 +150,33 @@ const fetchData = async () => {
   }
 }
 ```
+
+### CLI
+One of these things is not like the other...yep again!
+
+```bash
+$ yarn clean
+```
+`clean` is a keyword to the Yarn CLI so this will generate a _.yarnclean_ this is muy no bueno if you didn't mean to do this!
+For more refer to [yarn clean](https://yarnpkg.com/en/docs/cli/clean).
+```bash
+$ yarn run clean
+```
+_package.json_
+```json
+"clean": "rimraf dist npm-debug.log.*"
+```
+For the most part you never need to use _run_ when working with Yarn but this is just like NPM numbnuts if it's a keyword and you had a script that is the same namesake not calling the _run_ keyword will cause you many a headaches!!!
+
+### GIT
+Something that is your friend when you are stupid...which is often.
+
+```bash
+$ git reset --hard <commit>
+```
+When you make a royal screw up, I mean epic, and it does not deal with Yarn or NPM you can reset the _cwd_ to the last commit.
+If you make an epic ninja screw up remember the following experience:
+```bash
+$ git pull <REMOTE> <branch>
+```
+Notice how **REMOTE** is all caps? That's because that is the **REMOTE** numbnuts; **NOT** the URL!!!! It's okay have a beer, cry yourself to sleep, and come back strong tomorrow.
