@@ -16,6 +16,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [Fetch](#fetch)
 - [CLI](#cli)
 - [GIT](#git)
+- [Lifecyles](#lifecyles)
 
 ## IMPORTANT
 
@@ -180,3 +181,8 @@ If you make an epic ninja screw up remember the following experience:
 $ git pull <REMOTE> <branch>
 ```
 Notice how **REMOTE** is all caps? That's because that is the **REMOTE** numbnuts; **NOT** the URL!!!! It's okay have a beer, cry yourself to sleep, and come back strong tomorrow.
+
+
+### Lifecyles
+Utilizing React Lifecyle Methods for what they are worth...use them dummy!
+**Coming very soon!**
