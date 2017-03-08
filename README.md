@@ -17,6 +17,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [CLI](#cli)
 - [GIT](#git)
 - [Lifecyles](#lifecyles)
+- [Now](#now)
 
 ## IMPORTANT
 
@@ -186,3 +187,8 @@ Notice how **REMOTE** is all caps? That's because that is the **REMOTE** numbnut
 ### Lifecyles
 Utilizing React Lifecyle Methods for what they are worth...use them dummy!
 **Coming very soon!**
+
+### Now
+Deploying with the `now` CLI interface from Ziet.
+
+Do **NOT** add `NODE_ENV=production` as an envvar unless all _required_ packages are set as dependencies. Just like in Heroku the _production_ flag does not read dev-dependencies.
