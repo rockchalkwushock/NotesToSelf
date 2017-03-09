@@ -18,6 +18,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [GIT](#git)
 - [Lifecyles](#lifecyles)
 - [Now](#now)
+- [reduce](#reduce)
 
 ## IMPORTANT
 
@@ -192,3 +193,25 @@ Utilizing React Lifecyle Methods for what they are worth...use them dummy!
 Deploying with the `now` CLI interface from Ziet.
 
 Do **NOT** add `NODE_ENV=production` as an envvar unless all _required_ packages are set as dependencies. Just like in Heroku the _production_ flag does not read dev-dependencies.
+
+### Reduce
+Very simple yet powerful use case for testing reducers using `[].reduce()`. For more on `.reduce()` checkout this [article](https://medium.com/javascript-scene/reduce-composing-software-fe22f0c39a1d#.s64k6pkg7).
+```javascript
+const ADD_VALUE = 'ADD_VALUE';
+const summingReducer = (state = 0, action = {}) => {
+  const { type, payload } = action;
+  switch (type) {
+    case ADD_VALUE:
+      return state + payload.value;
+    default: return state;
+  }
+};
+
+const actions = [
+  { type: 'ADD_VALUE', payload: { value: 1 } },
+  { type: 'ADD_VALUE', payload: { value: 1 } },
+  { type: 'ADD_VALUE', payload: { value: 1 } }
+];
+
+actions.reduce(summingReducer, 0); // 3
+```
