@@ -19,6 +19,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [Lifecyles](#lifecyles)
 - [Now](#now)
 - [reduce](#reduce)
+- [Semantic-Release](#semantic-release)
 
 ## IMPORTANT
 
@@ -215,3 +216,10 @@ const actions = [
 
 actions.reduce(summingReducer, 0); // 3
 ```
+
+### Semantic-Release
+When switching from a _private_ to _public_ repository the gh-token & npm-token will not transfer. You must reinitialize these values using:
+```bash
+semantic-release-cli setup
+```
+
