@@ -20,6 +20,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [Now](#now)
 - [reduce](#reduce)
 - [Semantic-Release](#semantic-release)
+- [Create-React-App](#create-react-app)
 
 ## IMPORTANT
 
@@ -223,3 +224,15 @@ When switching from a _private_ to _public_ repository the gh-token & npm-token 
 semantic-release-cli setup
 ```
 
+### Create-React-App
+Any project built prior to `react-scripts@0.9.5` must be updgraded to `v0.9.5` or must downgrade `node` globally to `node < 7.7.2`:
+- [The Issue](https://github.com/facebookincubator/create-react-app/issues/1776)
+- [The PR](https://github.com/facebookincubator/create-react-app/pull/1783)
+- [Version Release](https://github.com/facebookincubator/create-react-app/releases/tag/v0.9.5)
+```bash
+yarn upgrade react-scripts@0.9.5
+# OR
+npm update --save-dev react-scripts@0.9.5
+# Verify
+npm view react-scripts version # 0.9.5
+```
