@@ -21,6 +21,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [reduce](#reduce)
 - [Semantic-Release](#semantic-release)
 - [Create-React-App](#create-react-app)
+- [Tail-Call](https://codetuts.tech/flatten-deep-nested-array-object/)
 
 ## IMPORTANT
 
@@ -235,4 +236,28 @@ yarn upgrade react-scripts@0.9.5
 npm update --save-dev react-scripts@0.9.5
 # Verify
 npm view react-scripts version # 0.9.5
+```
+
+### Tail-Call
+[Tail-Call Optimized Recursion Call](https://codetuts.tech/flatten-deep-nested-array-object/)
+```javascript
+// First declare a function that will be checking
+// that what we pass to it is cabaple of being
+// concated.
+const scalar = v => !Array.isArray(v);
+
+// Second declare a function that accepts the nested array.
+const flatten = (deep, flat = []) => {  
+  // condition check for ending recursion
+  if (deep.length === 0) return flat;
+  // head is the current index in the array.
+  // tail is the rest of the values.
+  let [head, ...tail] = deep;
+  // is the value able to be concatenated?
+  if (scalar(head)) {
+    return flatten(tail, flat.concat(head));
+  } else {
+    return flatten(tail, flat.concat(flatten(head)));
+  }
+}
 ```
