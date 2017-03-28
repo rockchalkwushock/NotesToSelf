@@ -22,6 +22,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [Semantic-Release](#semantic-release)
 - [Create-React-App](#create-react-app)
 - [Tail-Call](https://codetuts.tech/flatten-deep-nested-array-object/)
+- [Jest](#jest)
 
 ## IMPORTANT
 
@@ -261,3 +262,6 @@ const flatten = (deep, flat = []) => {
   }
 }
 ```
+
+### Jest
+Fun fact `jest` sets `NODE_ENV=test` automatically under the hood :+1:
