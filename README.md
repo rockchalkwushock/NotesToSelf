@@ -23,6 +23,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [Create-React-App](#create-react-app)
 - [Tail-Call](https://codetuts.tech/flatten-deep-nested-array-object/)
 - [Jest](#jest)
+- [GH-Issues](#gh-issues)
 
 ## IMPORTANT
 
@@ -265,3 +266,8 @@ const flatten = (deep, flat = []) => {
 
 ### Jest
 Fun fact `jest` sets `NODE_ENV=test` automatically under the hood :+1:
+
+### GH Issues
+Closing Github Issues and the keywords that must be used:
+
+https://help.github.com/articles/closing-issues-via-commit-messages/
