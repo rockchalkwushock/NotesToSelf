@@ -24,6 +24,7 @@ A place to put those little nuggets of knowledge I have learned after being a co
 - [Tail-Call](https://codetuts.tech/flatten-deep-nested-array-object/)
 - [Jest](#jest)
 - [GH-Issues](#gh-issues)
+- [Travis-CI](#travis-ci)
 
 ## IMPORTANT
 
@@ -271,3 +272,9 @@ Fun fact `jest` sets `NODE_ENV=test` automatically under the hood :+1:
 Closing Github Issues and the keywords that must be used:
 
 https://help.github.com/articles/closing-issues-via-commit-messages/
+
+### Travis-CI
+[How to skip a build](https://docs.travis-ci.com/user/customizing-the-build/#Skipping-a-build)
+```bash
+git commit -m "<commit message> [skip ci]"
+```
